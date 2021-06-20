@@ -19,10 +19,10 @@ while true
   puts "1~3の番号を入力して下さい。"
 end
 
-chose_product = products[select_product_num - 1]
+chosen_product = products[select_product_num - 1]
 
 puts <<~TEXT
-  #{chose_product[:name]}ですね。
+  #{chosen_product[:name]}ですね。
   何名で予約されますか？
 TEXT
 
@@ -35,7 +35,7 @@ end
 
 puts "#{number_of_people}名ですね。"
 
-total_price = chose_product[:price] * number_of_people
+total_price = chosen_product[:price] * number_of_people
 
 if number_of_people >= 5
   total_price *= 0.9
